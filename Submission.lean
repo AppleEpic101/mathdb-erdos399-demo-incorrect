@@ -9,9 +9,17 @@ Counterexample credited there to Jonas Barfield; Lean formalization credited to 
 -/
 import FtpEvalBench.E399
 
+/-!
+# Erdős problem 399: development verification demonstration
+
+A counterexample to the original no-solutions assertion, checked against MathDB's
+saved target. This is a video demonstration only; no payment is due.
+-/
+
 namespace Submission
 
 -- False is the answer to the original no-solutions question.
+/-- Answer the original no-solutions question using an explicit witness. -/
 theorem solution : Problem.Target False := by
   change False ↔ ¬ ∃ (n x y k : ℕ),
     1 < x * y ∧ 2 < k ∧
